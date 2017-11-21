@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="CSS\PortfolioPage_JsProject2.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Portfolio</title>
+
+  </head>
+  <body class="thetop">
+    <div class="page-wrapper">
+
+    <nav>
+     <ul>
+       <li><img src="images\Logos\code4ct_logo_360.jpg" alt="" width="300px" height="70px"></li>
+       <li style="padding-left:80px"><a href="JS_project.html">HOME</a></li>
+       <li style="padding-left:10px"><a href="AboutPage_JsProject.html">ABOUT</a></li>
+       <li style="padding-left:10px"><a href="PortfolioPage_JsProject2.html">PORTFOLIO</a></li>
+       <li style="padding-left:10px"><a href="ContactPage_JsProject.html">CONTACT</a></li>
+       <input type="text" placeholder="search"  maxlength="10px" size="15">
+       <button id="search"><i style="font-size:12.5px;color:indianred" class="fa">&#xf002;</i></button>
+     </ul>
+    </nav>
+
+    <header>
+      <h1 id="aboutH1">Portfolio</h1>
+    </header>
+
+
+
+        <div class="header">
+          <h2>Our Awesome Portfolio</h2>
+          <p>Coding is in essence the ability to tell a computer what to do. With the rise of smart phones, more and more of us carry around a little computer that can be programmed to do specific things through a coding language. Those of us who can speak code will be able to.</p>
+        </div>
+
+
+         <section class="gallery">
+           <div><a href="images\portimg1.JPG"><img src="images\portimg1.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg2.JPG"><img src="images\portimg2.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg3.JPG"><img src="images\portimg3.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg4.JPG"><img src="images\portimg4.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg5.JPG"><img src="images\portimg5.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg6.JPG"><img src="images\portimg6.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg7.JPG"><img src="images\portimg7.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg8.JPG"><img src="images\portimg8.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg9.JPG"><img src="images\portimg9.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg10.JPG"><img src="images\portimg10.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg11.JPG"><img src="images\portimg11.JPG" width="300px" height="200px"></a></div>
+           <div><a href="images\portimg12.JPG"><img src="images\portimg12.JPG" width="300px" height="200px"></a></div>
+         </section>
+
+<script type="text/javascript">
+    var $overlay  = $('<div id="overlay"></div>');
+    var $image    = $('<img>');
+    var imageHREF = '';
+    var imageSRC  = '';
+
+    //add div and img markup at end of body for the overlay
+    $('body').append($overlay);
+    $($overlay).append($image);
+
+    //prevent link, get HREF from clicked image, set src for image inside overlay to the HREF, show the overlay
+    $('.gallery a').click(function(event) {
+      event.preventDefault();
+      imageHREF = $(this).attr('href');
+      $image.attr('src', imageHREF);
+
+      $overlay.fadeIn(500);
+      $image.slideDown(600);
+    });
+
+    //hide overlay
+    $($overlay).click(function() {
+      $image.slideUp();
+      $overlay.fadeOut();
+    })
+
+    $($overlay).click(function(){
+      $overlay.hide();
+    })
+</script>
+            <div id='carousel_container'>
+            <div id='carousel_inner'>
+            <ul id='carousel_ul'>
+                <li>
+                 <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F819T062G-0e4d5651ed/openboxlogo._360.jpg' width="120" height="100px"/>
+               </li>
+
+               <li>
+                 <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F82ATB20P-1e13cf13db/45_case_study_logos_11_csg._360.jpg' width="120" height="100px"/>
+               </li>
+
+               <li>
+                  <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F80JKGBMW-4efba088aa/deloitte-logo._360.jpg' width="120" height="100px"/>
+               </li>
+
+                <li>
+                  <img  src='https://files.slack.com/files-tmb/T6R8ZLWGK-F8167E93M-3d574ea6b6/mazars-logo._360.jpg' width="120" height="100px"/>
+                </li>
+
+               <li>
+                 <img src='https://files.slack.com/files-tmb/T6R8ZLWGK-F819SVA04-9739d3d999/mobenzi_logo._360.jpg' width="120" height="100px"/>
+                </li>
+
+                <li>
+                  <img src="https://files.slack.com/files-tmb/T6R8ZLWGK-F82ATE90X-518f205964/takealot-logo._360.jpg" width="120" height="100px">
+                </li>
+
+                <li>
+                  <img src="https://files.slack.com/files-tmb/T6R8ZLWGK-F80JKJNE4-f29fec516e/tns-logo._360.jpg" alt="" width="120" height="100px">
+                </li>
+
+                </ul>
+            </div>
+        </div>
+
+                   <script src="Js_\JsProjectSlider.js"></script>
+
+
+
+
+        <footer>
+          <div class="footer_list">
+            <h4>Legal</h4>
+            <p>Code for Cape Town is a project of Innovate South Africa, which is a registered non-profit (137806NPO) and a Public Beneficiary Organisation (930050338)</p>
+         </div>
+
+         <div class="footer_list">
+           <h4 style="padding-left:20px">Company</h4>
+           <ul>
+             <li><a href="AboutPage_JsProject.html">About Us</a></li>
+             <li><a href="ContactPage_JsProject.html">Contact Us</a></li>
+             <li><a href="http://code4ct.com/blog/">Blog</a></li>
+             <li><a href="http://code4ct.com/impact/">Testimonials</a></li>
+             <li><a href="http://code4ct.com/courses/">Affliate programs</a></li>
+           </ul>
+          </div>
+
+          <div class="footer_list">
+            <h4 style="padding-left:20px">Help & Support</h4>
+            <ul>
+              <li><a href="#">Help Centre</a></li>
+              <li><a href="#">Free simple template</a></li>
+              <li><a href="#">Refund policy</a></li>
+              <li><a href="#">Report spam</a></li>
+            </ul>
+          </div>
+
+
+         <div class="footer_list">
+            <h4 style="padding-left:40px">Contact</h4>
+            <ul id="contact_list">
+              <li><i class="material-icons">call</i>021-685 0991</li>
+              <li><i class="material-icons">email</i>info@code4ct.com</li>
+              <li><i class="material-icons">location_on</i>403 Old Castle Brewery,
+                <br/>6 Beach Rd, Woodstock,
+            <br/>Cape Town, 7915</li>
+            </ul>
+
+         </div>
+
+       </footer>
+
+       <div class='scrolltop'>
+          <div class='scroll icon'><i class="fa fa-4x fa-angle-up"></i></div>
+        </div>
+
+       <script type="text/javascript">
+                   $(window).scroll(function() {
+         if ($(this).scrollTop() > 50 ) {
+             $('.scrolltop:hidden').stop(true, true).fadeIn();
+         } else {
+             $('.scrolltop').stop(true, true).fadeOut();
+         }
+       });
+       $(function(){$(".scroll").click(function(){$("html,body").animate({scrollTop:$(".thetop").offset().top},"1000");return false})})
+       </script>
+
+          <section id="bottom_footer">
+            <ul id="bottom_footer_list">
+              <li style="float:left">copyright © 2017 PRIVACY POLICY</li>
+              <li style="float:right;padding-right:10px"><a href="https://www.facebook.com/code4ct/"><i class="fa fa-facebook"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://twitter.com/@code4ct"><i class="fa fa-twitter"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://za.pinterest.com/"><i class="fa fa-pinterest-p"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://plus.google.com/discover"><i class="fa fa-google-plus"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+              <li style="float:right;padding-right:10px"><a href="https://www.skype.com/en/new/"><i class="fa fa-skype"></i></a></li>
+              <li style="float:right;padding-right:10px">Follow us on:</li>
+             </ul>
+         </section>
+
+</div>
+
+  </body>
+</html>
+
+<script type="text/javascript">
+// Select all links with hashes
+$('a[href*="#"]')
+// Remove links that don't actually link to anything
+.not('[href="#"]')
+.not('[href="#0"]')
+.click(function(event) {
+  // On-page links
+  if (
+    location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+    &&
+    location.hostname == this.hostname
+  ) {
+    // Figure out element to scroll to
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    // Does a scroll target exist?
+    if (target.length) {
+      // Only prevent default if animation is actually gonna happen
+      event.preventDefault();
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000, function() {
+        // Callback after animation
+        // Must change focus!
+        var $target = $(target);
+        $target.focus();
+        if ($target.is(":focus")) { // Checking if the target was focused
+          return false;
+        } else {
+          $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+          $target.focus(); // Set focus again
+        };
+      });
+    }
+  }
+});
+</script>
